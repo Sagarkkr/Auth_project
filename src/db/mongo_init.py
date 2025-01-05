@@ -13,9 +13,10 @@ class MongoDBClient:
         if cls._instance is None:
             cls._instance = super().__new__(cls)
             try:
-                mongo_conf: str = (
-                    f"mongodb+srv://{settings.MONGO_USER}:{settings.MONGO_PASSWORD}@{settings.MONGO_HOST}/"
-                )
+                # mongo_conf: str = (
+                #     f"mongodb+srv://{settings.MONGO_USER}:{settings.MONGO_PASSWORD}@{settings.MONGO_HOST}/"
+                # )
+                mongo_conf: str = "mongodb+srv://Sagar2022:Kripa2022@authcluster.dt9ei.mongodb.net/"
                 cls._instance._client = motor.motor_asyncio.AsyncIOMotorClient(mongo_conf)
                 cls._instance._db = cls._instance._client[settings.MONGO_DATABASE]
                 logger.info("Connected to MongoDB.")

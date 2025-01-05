@@ -2,6 +2,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import FastAPI
 #Local imports
 from src.db.mongo_init import MongoDBClient
+from src.router import api_router_v1
 
 app = FastAPI()
 scheduler = AsyncIOScheduler()
@@ -23,3 +24,5 @@ async def startup_event():
 async def shutdown_event():
     await MongoDBClient.close_mongo_connection()
     scheduler.shutdown()
+
+app.include_router(api_router_v1)

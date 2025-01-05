@@ -1,0 +1,3 @@
+class CollectionNameRegistry:
+    USER = "users"
+    
