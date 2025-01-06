@@ -1,6 +1,6 @@
 from enum import Enum
 from pydantic import BaseModel, Field
-from mongoengine import Document, StringField, BooleanField
+from mongoengine import StringField, BooleanField
 from mongoengine.fields import EnumField
 import bcrypt
 

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  kraftbase_project:
+    ports:
+      - "9010:8000"
+    volumes:
+      - /var/log/auht_project:/var/log/auth-project

@@ -20,7 +20,7 @@ async def register(body:User):
             content="User created successfully"
         )
     return JSONResponse(
-            status_code=status.HTTP_200_OK,
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content="User creation unsuccessful"
         )
 
